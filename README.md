@@ -62,23 +62,27 @@ module "cert" {
   # ...
 }
 ```
+
 ## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 0.13 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 3.0 |
+
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_aws.acm"></a> [aws.acm](#provider\_aws.acm) | >= 3.0 |
 | <a name="provider_aws.route53"></a> [aws.route53](#provider\_aws.route53) | >= 3.0 |
+
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
 | <a name="module_this"></a> [this](#module\_this) | cloudposse/label/null | 0.25.0 |
+
 ## Resources
 
 | Name | Type |
@@ -87,6 +91,7 @@ module "cert" {
 | [aws_acm_certificate_validation.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/acm_certificate_validation) | resource |
 | [aws_route53_record.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_record) | resource |
 | [aws_route53_zone.default](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/route53_zone) | data source |
+
 ## Inputs
 
 | Name | Description | Type | Default | Required |
@@ -119,6 +124,7 @@ module "cert" {
 | <a name="input_wait_for_certificate_issued"></a> [wait\_for\_certificate\_issued](#input\_wait\_for\_certificate\_issued) | Whether to wait for the certificate to be issued by ACM (the certificate status changed from `Pending Validation` to `Issued`) | `bool` | `false` | no |
 | <a name="input_zone_id"></a> [zone\_id](#input\_zone\_id) | The zone id of the Route53 Hosted Zone which can be used instead of `var.zone_name`. | `string` | `null` | no |
 | <a name="input_zone_name"></a> [zone\_name](#input\_zone\_name) | The name of the desired Route53 Hosted Zone | `string` | `""` | no |
+
 ## Outputs
 
 | Name | Description |
@@ -128,6 +134,7 @@ module "cert" {
 | <a name="output_id"></a> [id](#output\_id) | The ID of the certificate |
 | <a name="output_validation_certificate_arn"></a> [validation\_certificate\_arn](#output\_validation\_certificate\_arn) | Certificate ARN from the `aws_acm_certificate_validation` resource |
 | <a name="output_validation_id"></a> [validation\_id](#output\_validation\_id) | The ID of the certificate validation |
+
 ## Breaking Changes
 
 Please consult [BREAKING\_CHANGES.md](BREAKING\_CHANGES.md) for more information about version
